@@ -30,9 +30,9 @@ export class AuthService {
   setLoggedInUser(user: User): void {
     localStorage.setItem('loggedInUser', JSON.stringify(user));
   }
-  getLoggedInUser(): User | null {
+  getLoggedInUser(): User {
     const loggedInUserString = localStorage.getItem('loggedInUser');
-    return loggedInUserString ? JSON.parse(loggedInUserString) : null;
+    return loggedInUserString ? JSON.parse(loggedInUserString) : undefined;
   }
 
   isLoggedIn(): boolean {
