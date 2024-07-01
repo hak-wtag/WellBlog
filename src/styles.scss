@@ -1,7 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.scss";
-@import "assets/styles/variables.scss";
+@import "../public/styles/variables.scss";
 
 // global css
 *,
@@ -12,6 +11,40 @@
   padding: 0;
   text-decoration: none;
 }
+
 body {
   font: 100% $font-stack;
+}
+
+.color-primary {
+  color: $primary--color;
+}
+
+.background-primary {
+  background-color: $primary--color !important;
+  color: $white--color !important;
+}
+
+.btn {
+  border-radius: 1.5rem;
+  height: 2.9rem;
+  text-align: center;
+  width: 8rem;
+}
+
+.form-input {
+  &:focus {
+    border-color: $primary--color;
+    box-shadow: none;
+  }
+}
+.eye-btn {
+  cursor: pointer;
+  .eye-btn-icon {
+    color: #686a6c;
+  }
+  &:hover {
+    background-color: #ededff;
+    border-color: $primary--color !important;
+  }
 }
